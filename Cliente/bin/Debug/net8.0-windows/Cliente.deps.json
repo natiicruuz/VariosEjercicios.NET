@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Cliente/1.0.0": {
+        "dependencies": {
+          "Servidor": "1.0.0",
+          "XML": "1.0.0"
+        },
+        "runtime": {
+          "Cliente.dll": {}
+        }
+      },
+      "Servidor/1.0.0": {
+        "dependencies": {
+          "XML": "1.0.0"
+        },
+        "runtime": {
+          "Servidor.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "XML/1.0.0": {
+        "runtime": {
+          "XML.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cliente/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servidor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "XML/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
