@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cliente", "Cliente\Cliente.csproj", "{A80E168E-1552-4CF1-BD03-783EC772D37E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servidor", "Servidor\Servidor.csproj", "{AE8D03E5-3F16-49FE-A746-399C09901BD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XML", "XML\XML.csproj", "{109CDF60-A14F-4C92-86B5-E24496D97F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A80E168E-1552-4CF1-BD03-783EC772D37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80E168E-1552-4CF1-BD03-783EC772D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80E168E-1552-4CF1-BD03-783EC772D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80E168E-1552-4CF1-BD03-783EC772D37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8D03E5-3F16-49FE-A746-399C09901BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8D03E5-3F16-49FE-A746-399C09901BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8D03E5-3F16-49FE-A746-399C09901BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8D03E5-3F16-49FE-A746-399C09901BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{109CDF60-A14F-4C92-86B5-E24496D97F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109CDF60-A14F-4C92-86B5-E24496D97F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109CDF60-A14F-4C92-86B5-E24496D97F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109CDF60-A14F-4C92-86B5-E24496D97F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B8675BA-9DDE-44FA-8B47-E1660EEF31A4}
+	EndGlobalSection
+EndGlobal
