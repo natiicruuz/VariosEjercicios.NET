@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Cliente\\Cliente.csproj": {}
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Cliente\\Cliente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Cliente\\Cliente.csproj": {
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Cliente\\Cliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Cliente\\Cliente.csproj",
+        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Cliente\\Cliente.csproj",
         "projectName": "Cliente",
-        "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Cliente\\Cliente.csproj",
+        "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Cliente\\Cliente.csproj",
         "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Cliente\\obj\\",
+        "outputPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Cliente\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\Servidor.csproj": {
-                "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\Servidor.csproj"
+              "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj": {
+                "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj"
               },
-              "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj": {
-                "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj"
+              "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {
+                "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\Servidor.csproj": {
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\Servidor.csproj",
+        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj",
         "projectName": "Servidor",
-        "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\Servidor.csproj",
+        "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj",
         "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\Servidor\\obj\\",
+        "outputPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -108,8 +108,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj": {
-                "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj"
+              "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {
+                "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj": {
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj",
+        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj",
         "projectName": "XML",
-        "projectPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\XML.csproj",
+        "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj",
         "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Natalia\\source\\repos\\ReservaBicicletas\\XML\\obj\\",
+        "outputPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
