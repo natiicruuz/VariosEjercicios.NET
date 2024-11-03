@@ -2,16 +2,16 @@
 using System.Net;
 using System.Text;
 using XML;
-using System.Xml;
+using System.Threading.Tasks;
 
 namespace Servidor
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Servidor arrancado!");
-            ServidorBicis.IniciarServidor();
+            await ServidorBicis.IniciarServidorAsync();
         }
     }
 
@@ -19,7 +19,7 @@ namespace Servidor
     {
         private static readonly bool[] bicis = new bool[40];
 
-        public static void IniciarServidor()
+        public static async Task IniciarServidorAsync()
         {
             TcpListener listener = new TcpListener(IPAddress.Any, 5000);
             listener.Start();
@@ -27,29 +27,28 @@ namespace Servidor
 
             while (true)
             {
-                TcpClient client = listener.AcceptTcpClient();
-                Thread hilo = new Thread(() => ProcesarSolicitud(client));
-                hilo.Start();
+                TcpClient client = await listener.AcceptTcpClientAsync();
+                _ = ProcesarSolicitudAsync(client); // Ejecuta cada solicitud asincrónicamente
             }
         }
 
-        private static void ProcesarSolicitud(TcpClient client)
+        private static async Task ProcesarSolicitudAsync(TcpClient client)
         {
             try
             {
                 using (NetworkStream stream = client.GetStream())
                 {
                     byte[] buffer = new byte[1024];
-                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                     string mensajeXML = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                    
+
                     var solicitud = XmlConverter.LeerSolicitudReservaXML(mensajeXML);
                     bool exito = ReservarAsiento(solicitud.TipoBici);
 
                     string respuestaXML = XmlConverter.CrearRespuestaReservaXML(exito);
 
                     byte[] respuestaBytes = Encoding.UTF8.GetBytes(respuestaXML);
-                    stream.Write(respuestaBytes, 0, respuestaBytes.Length);
+                    await stream.WriteAsync(respuestaBytes, 0, respuestaBytes.Length);
                 }
             }
             catch (Exception ex)
@@ -72,7 +71,7 @@ namespace Servidor
                     }
                 }
             }
-            Console.WriteLine($"No hay mas bicis del tipo {tipoBici}");
+            Console.WriteLine($"No hay más bicis del tipo {tipoBici}");
             return false; // No hay bicis disponibles
         }
     }

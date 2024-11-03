@@ -12,7 +12,7 @@ namespace Cliente
         }
 
 
-        private void AcceptBtn_Click(object sender, EventArgs e)
+        private async void AcceptBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -21,8 +21,8 @@ namespace Cliente
                 // Genera el mensaje XML
                 string mensajeXML = XmlConverter.CrearSolicitudReservaXML(tipoAsiento);
 
-                // Envía el mensaje al servidor
-                string respuesta = EnviarMensajeAlServidor(mensajeXML);
+                // Envía el mensaje al servidor y espera la respuesta
+                string respuesta = await EnviarMensajeAlServidorAsync(mensajeXML);
 
                 // Muestra la respuesta en la caja de texto
                 statusResponseTxt.Text = respuesta;
@@ -33,21 +33,20 @@ namespace Cliente
             }
         }
 
-        private static string EnviarMensajeAlServidor(string mensajeXML)
+        private static async Task<string> EnviarMensajeAlServidorAsync(string mensajeXML)
         {
             try
             {
-                // Conectar al servidor en localhost y puerto 5000
                 using (TcpClient client = new TcpClient("127.0.0.1", 5000))
                 using (NetworkStream stream = client.GetStream())
                 {
-                    // Convertir el mensaje XML a bytes y enviarlo al servidor
+                    // Convertir el mensaje XML a bytes y enviarlo al servidor de forma asincrónica
                     byte[] mensajeBytes = Encoding.UTF8.GetBytes(mensajeXML);
-                    stream.Write(mensajeBytes, 0, mensajeBytes.Length);
+                    await stream.WriteAsync(mensajeBytes, 0, mensajeBytes.Length);
 
-                    // Recibir la respuesta del servidor
+                    // Recibir la respuesta del servidor de forma asincrónica
                     byte[] buffer = new byte[1024];
-                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                     string respuestaXML = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
                     return respuestaXML;
@@ -59,6 +58,7 @@ namespace Cliente
                 return "Error en el envío";
             }
         }
+
 
 
         // permite que solo se seleccionen uno al mismo tiempo. 
