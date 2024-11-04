@@ -12,7 +12,7 @@ namespace Cliente
             InitializeComponent();
         }
 
-        private async void acceptBtn_Click(object sender, EventArgs e)
+        private void acceptBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -20,7 +20,7 @@ namespace Cliente
                 string mensajeXML = XMLConverter.CrearSolicitudReservaXML(tipoAsiento);
 
                 // Enviar mensaje al servidor y obtener respuesta asincrónicamente
-                string respuesta = await EnviarMensajeAlServidorAsync(mensajeXML);
+                string respuesta = EnviarMensajeAlServidor(mensajeXML);
 
                 // Mostrar la respuesta en el formulario
                 resultTxt.Text = respuesta;
@@ -31,7 +31,7 @@ namespace Cliente
             } 
         }
 
-        private async Task<string> EnviarMensajeAlServidorAsync(string mensajeXML)
+        private string EnviarMensajeAlServidor(string mensajeXML)
         {
             try
             {
@@ -39,10 +39,10 @@ namespace Cliente
                 using (NetworkStream stream = client.GetStream())
                 {
                     byte[] mensajeBytes = Encoding.UTF8.GetBytes(mensajeXML);
-                    await stream.WriteAsync(mensajeBytes, 0, mensajeBytes.Length);
+                    stream.Write(mensajeBytes, 0, mensajeBytes.Length);
 
                     byte[] buffer = new byte[1024];
-                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
                     return Encoding.UTF8.GetString(buffer, 0, bytesRead);
                 }
             }

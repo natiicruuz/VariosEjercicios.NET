@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj": {}
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj": {
+    "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj",
+        "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj",
         "projectName": "XML",
-        "projectPath": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj",
+        "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj",
         "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\obj\\",
+        "outputPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

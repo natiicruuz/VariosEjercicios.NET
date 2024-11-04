@@ -12,7 +12,7 @@ namespace Servidor
     {
         private static readonly bool[] parkings = new bool[100];
 
-        public static async Task IniciarServidorAsync()
+        public static void IniciarServidor()
         {
             TcpListener listener = new TcpListener(IPAddress.Any, 5000);
             listener.Start();
@@ -20,32 +20,42 @@ namespace Servidor
 
             while (true)
             {
-                TcpClient client = await listener.AcceptTcpClientAsync();
-                _ = ProcesarSolicitudAsync(client);
+                TcpClient client = listener.AcceptTcpClient();
+                Thread hilo = new Thread(() => ProcesarSolicitud(client));
+                hilo.Start();
+
             }
         }
 
-        private static async Task ProcesarSolicitudAsync(TcpClient client)
+        private static void ProcesarSolicitud(TcpClient client)
         {
             try
             {
                 using (NetworkStream stream = client.GetStream())
                 {
                     byte[] buffer = new byte[1024];
-                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
                     string mensajeXML = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
+                    // Procesar la solicitud de reserva
                     var solicitud = XMLConverter.LeerSolicitudReservaXML(mensajeXML);
                     bool exito = ReservarParking(solicitud.TipoReserva);
 
+                    // Crear la respuesta en formato XML
                     string respuestaXML = XMLConverter.CrearRespuestaReservaXML(exito);
                     byte[] respuestaBytes = Encoding.UTF8.GetBytes(respuestaXML);
-                    await stream.WriteAsync(respuestaBytes, 0, respuestaBytes.Length);
+
+                    // Enviar la respuesta al cliente
+                    stream.Write(respuestaBytes, 0, respuestaBytes.Length);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                client.Close();
             }
         }
 

@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\Servidor\\Servidor.csproj",
+      "projectUniqueName": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj",
       "projectName": "Servidor",
-      "projectPath": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\Servidor\\Servidor.csproj",
+      "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\Servidor.csproj",
       "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\Servidor\\obj\\",
+      "outputPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\Servidor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -59,8 +59,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj": {
-              "projectPath": "C:\\Users\\Natalia\\source\\repos\\Reservas_Parking\\XML\\XML.csproj"
+            "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj": {
+              "projectPath": "C:\\Users\\Natalia\\source\\repos\\VariosEjercicios.NET\\XML\\XML.csproj"
             }
           }
         }

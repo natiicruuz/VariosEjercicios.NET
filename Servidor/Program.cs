@@ -7,10 +7,10 @@ namespace Servidor
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Servidor iniciado");
-            await ServidorParkings.IniciarServidorAsync();
+            ServidorParkings.IniciarServidor();
         }
     }
 }
