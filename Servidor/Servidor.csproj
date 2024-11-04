@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\XML\XML.csproj" />
+	</ItemGroup>
+
+
+
+
 </Project>
